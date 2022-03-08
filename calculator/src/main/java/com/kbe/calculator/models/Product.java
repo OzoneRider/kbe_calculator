@@ -1,32 +1,14 @@
 package com.kbe.calculator.models;
 
 public class Product {
-    private String id;
-    private String name;
     private float price;
+    private float vat;
 
     public Product(){}
 
-    public Product(String id, String name, float price) {
-        this.id = id;
-        this.name = name;
+    public Product(float price, float vat) {
+        this.vat = vat;
         this.price = price;
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public float getPrice() {
@@ -35,5 +17,13 @@ public class Product {
 
     public void setPrice(float price) {
         this.price = price;
+    }
+
+    public float getVat() {
+        return vat;
+    }
+
+    public void setVat(float vat) {
+        this.vat = vat;
     }
 }

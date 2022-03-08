@@ -12,9 +12,4 @@ public class CalculatorApplication {
 		SpringApplication.run(CalculatorApplication.class, args);
 	}
 
-	@Bean
-	public RestTemplate restTemplate(){
-		return new RestTemplate();
-	}
-
 }
