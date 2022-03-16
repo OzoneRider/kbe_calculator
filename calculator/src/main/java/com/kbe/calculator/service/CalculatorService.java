@@ -1,19 +1,16 @@
 package com.kbe.calculator.service;
 
-import com.kbe.calculator.models.Product;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.kbe.calculator.models.VAT;
 import org.springframework.stereotype.Service;
-import org.springframework.web.client.RestTemplate;
 
 @Service
 public class CalculatorService {
 
-    @Autowired
-    private RestTemplate restTemplate;
-    private static final float vat = 0.19f;
+    private static final float PERCENT_VAT = 0.19f;
 
-    public float calculateVAT(Product product){
-        return product.getPrice()*vat;
+    public VAT calculateVAT(double price){
+        VAT vat = new VAT();
+        vat.setVatPrice(price*PERCENT_VAT);
+        return vat;
     }
-
 }
