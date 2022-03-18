@@ -1,15 +1,14 @@
 package com.kbe.calculator.models;
 
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+import java.math.BigDecimal;
+
+@Getter
+@Setter
+@NoArgsConstructor
 public class VAT {
-    private double vatPrice;
-
-    public VAT(){}
-
-    public double getVatPrice() {
-        return vatPrice;
-    }
-
-    public void setVatPrice(double vatPrice) {
-        this.vatPrice = vatPrice;
-    }
+    private BigDecimal vatPrice;
 }
